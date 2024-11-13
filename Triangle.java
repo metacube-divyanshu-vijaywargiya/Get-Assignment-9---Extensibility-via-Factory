@@ -1,35 +1,51 @@
 package com.metacube;
 
-public class Triangle implements Shape {
+import java.util.List;
 
+import com.metacube.Shape.ShapeType;
+
+public class Triangle implements Shape {
+	
 	@Override
 	public double getArea() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public double getPerimeter() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public Point getOrigin() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public boolean isPointEnclosed(Point point) {
-		// TODO Auto-generated method stub
-		return false;
+		throw new UnsupportedOperationException("Not implemented yet.");
 	}
 
 	@Override
 	public ShapeType getShapeType() {
+		return ShapeType.TRIANGLE;
+	}
+
+	@Override
+	public long getTimeStamp() {
 		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<Point> getVertices() {
 		return null;
+	}
+
+	@Override
+	public double getOriginDistance() {
+		return Math.sqrt(Math.pow(getOrigin().getXCoordinate() - 0, 2)) 
+	            + Math.pow(getOrigin().getYCoordinate() - 0, 2);
 	}
 
 }

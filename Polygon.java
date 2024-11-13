@@ -1,10 +1,19 @@
 package com.metacube;
 
+import java.util.List;
+
 public class Polygon implements Shape{
 	private Point originPoint;
 	private Integer numberOfSidesInPolygon;
 	private double lengthOfSideInPolygon;
+	private long timeStamp;
 
+	public Polygon(int numberOfSides , Point origin, double lengthOfSide) {
+		this.lengthOfSideInPolygon = lengthOfSide;
+		this.numberOfSidesInPolygon = numberOfSidesInPolygon;
+		this.timeStamp = System.currentTimeMillis();
+	}
+	
 	@Override
 	public double getArea() {
 		double apothem = lengthOfSideInPolygon/2*(Math.tan(180/numberOfSidesInPolygon));
@@ -30,6 +39,22 @@ public class Polygon implements Shape{
 	@Override
 	public ShapeType getShapeType() {
 		return ShapeType.POLYGON;
+	}
+
+	@Override
+	public long getTimeStamp() {
+		return timeStamp;
+	}
+
+	@Override
+	public List<Point> getVertices() {
+		return null;
+	}
+
+	@Override
+	public double getOriginDistance() {
+		return Math.sqrt(Math.pow(getOrigin().getXCoordinate() - 0, 2)) 
+	            + Math.pow(getOrigin().getYCoordinate() - 0, 2);
 	}
 
 }
