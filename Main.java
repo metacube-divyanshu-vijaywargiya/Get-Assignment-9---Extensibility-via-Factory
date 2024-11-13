@@ -45,6 +45,8 @@ public class Main {
 			//screen.addShape(circle2);
 			Shape circle3 = ShapeFactory.createShape(Shape.ShapeType.CIRCLE, new Point(10, 10), Arrays.asList(3.00));
 			screen.addShape(circle3);
+			Shape polygon1 = ShapeFactory.createShape(Shape.ShapeType.POLYGON, new Point(10, 10), Arrays.asList(6.00, 7.00));
+			screen.addShape(polygon1);
 			List<Shape> allShapesOnScreen3 = screen.getShapesSorted("perimeter");
 			for(Shape s : allShapesOnScreen3){
 				System.out.println(s);
@@ -52,8 +54,8 @@ public class Main {
 			
 			
 			//Deleting all rectangles from screen
-			System.out.println("\nShapes on screen after deleting all rectangles (based on timestamp) : ");
-			screen.deleteShapeByType(Shape.ShapeType.RECTANGLE);
+			System.out.println("\nShapes on screen after deleting all polygon (based on timestamp) : ");
+			screen.deleteShapeByType(Shape.ShapeType.POLYGON);
 			List<Shape> allShapesOnScreen4 = screen.getShapesSorted("timestamp");
 			for(Shape s : allShapesOnScreen4){
 				System.out.println(s);

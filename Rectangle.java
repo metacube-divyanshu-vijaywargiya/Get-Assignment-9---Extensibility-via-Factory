@@ -91,7 +91,11 @@ public class Rectangle implements Shape{
 				point.getYCoordinate() >= originPoint.getYCoordinate() && point.getYCoordinate() <= originPoint.getYCoordinate() + widthOfRectangle;
 	}
 
-
+	/**
+     * Returns the type of shape.
+     * 
+     * @return shape type, which is RECTANGLE here.
+     */
 	@Override
 	public ShapeType getShapeType() {
 		return ShapeType.RECTANGLE;
@@ -113,8 +117,7 @@ public class Rectangle implements Shape{
 	}
 	
     /**
-     * Calculates the perimeter of the rectangle using the formula:
-     * Perimeter = 2 * (length + breadth)
+     * Return list vertices
      * 
      * @return this will return list of vertices
      */
@@ -123,6 +126,11 @@ public class Rectangle implements Shape{
         return this.vertexList;
     }
 
+    /**
+     * Calculates the distance from the origin point to the coordinate (0, 0).
+     * 
+     * @return The distance from the origin point to the coordinate (0, 0).
+     */
 	@Override
 	public double getOriginDistance() {
 		return Math.sqrt(Math.pow(getOrigin().getXCoordinate() - 0, 2)) 

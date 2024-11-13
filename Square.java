@@ -87,6 +87,11 @@ public class Square implements Shape {
 				point.getYCoordinate() >= originPoint.getYCoordinate() && point.getYCoordinate() <= originPoint.getYCoordinate() + sideOfSquare;
 	}
 
+	/**
+     * Returns the type of shape.
+     * 
+     * @return shape type, which is SQUARE here.
+     */
 	@Override
 	public ShapeType getShapeType() {
 		return ShapeType.SQUARE;

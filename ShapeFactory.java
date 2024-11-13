@@ -20,6 +20,8 @@ public class ShapeFactory {
 			return new Rectangle(origin, Parameters.get(0), Parameters.get(1));
 		case SQUARE:
 			return new Square(origin, Parameters.get(0));
+		case POLYGON:
+			return new Polygon(origin, Parameters.get(0), Parameters.get(1));
 		default:
 			throw new IllegalArgumentException("Shape not Supported");
 		}
